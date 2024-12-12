@@ -1,86 +1,46 @@
-Todo List Project
+# Todo List Project
 
-Overview
+## Overview
 
 The Todo List project is a simple command-line application built in Java. It allows users to manage tasks effectively by adding, viewing, and marking tasks as completed. The project is designed to demonstrate fundamental Java programming concepts such as object-oriented programming, ArrayLists, and basic user input handling using the Scanner class.
 
 This project serves as my first step into learning Java. I find Java to be an intriguing and powerful language, and this project has given me hands-on experience with its syntax and structure. While this is a basic implementation, it lays the groundwork for more complex and advanced projects that I plan to develop in the future.
 
-Features
+## Features
 
-Add Tasks: Users can create new tasks with descriptions.
+- **Add Tasks**: Users can create new tasks with descriptions.
+- **View Tasks**: Displays a list of all tasks along with their completion status.
+- **Mark Tasks as Completed**: Allows users to mark tasks as finished.
 
-View Tasks: Displays a list of all tasks along with their completion status.
+## Technologies Used
 
-Mark Tasks as Completed: Allows users to mark tasks as finished.
+- **Language**: Java
+- **IDE**: Visual Studio Code
 
-Technologies Used
-
-Language: Java
-
-IDE: Visual Studio Code
-
-Getting Started
-
-Prerequisites
-
-Make sure you have the following installed:
-
-Java Development Kit (JDK): Version 8 or higher
-
-Git (optional, for cloning the repository)
-
-Installation
-
-Clone the repository:
-
-git clone <repository-url>
-
-Navigate to the project directory:
-
-cd <project-folder>
-
-Open the project folder in Visual Studio Code (or your preferred IDE).
-
-Running the Application
-
-Compile the Java file:
-
-javac TodoList.java
-
-Run the program:
-
-java TodoList
-
-Follow the on-screen menu to manage your tasks.
-
-Learning Journey
+## Learning Journey
 
 This project marks the beginning of my journey into Java programming. Through building this application, I have learned:
 
-How to use Java’s Scanner class for user input.
+- How to use Java’s Scanner class for user input.
+- The basics of object-oriented programming by creating and managing a `Task` class.
+- How to use ArrayLists to store and manipulate data dynamically.
 
-The basics of object-oriented programming by creating and managing a Task class.
-
-How to use ArrayLists to store and manipulate data dynamically.
-
-Future Plans
+## Future Plans
 
 I am excited to expand on this project or create more advanced ones. Some ideas for improvement or future features include:
 
-Adding a graphical user interface (GUI) for better usability.
+- Adding a graphical user interface (GUI) for better usability.
+- Implementing task prioritization and deadlines.
+- Storing tasks persistently using file handling or a database.
 
-Implementing task prioritization and deadlines.
-
-Storing tasks persistently using file handling or a database.
-
-Contributing
+## Contributing
 
 Contributions are welcome! If you have ideas or suggestions, feel free to open an issue or submit a pull request.
 
-License
+## License
 
-This project is open-source and available under the MIT License.
+This project is open-source and available under the [MIT License](LICENSE).
+
+---
 
 Thank you for checking out my project! Stay tuned for more updates.
-
