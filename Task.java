@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 class Task {
     String description;
     boolean isCompleted;
