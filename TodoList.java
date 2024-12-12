@@ -49,3 +49,11 @@ public class TodoList {
         tasks.add(new Task(description));
         System.out.println("Task added successfully.");
     }
+
+    private static void viewTasks() {
+        System.out.println("Your tasks:");
+        for (int i = 0; i < tasks.size(); i++) {
+            Task task = tasks.get(i);
+            System.out.println((i + 1) + ". " + task.description + " (" + (task.isCompleted ? "Completed" : "Incomplete") + ")");
+        }
+    }
