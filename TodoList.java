@@ -39,6 +39,9 @@ public class TodoList {
                 case 3:
                     markTaskCompleted();
                     break;
+                case 4:
+                    deleteTask();
+                    break;
                 case 6:
                     System.out.println("Exiting... Goodbye!");
                     System.exit(0);
@@ -49,7 +52,6 @@ public class TodoList {
         }
     }
     
-
     private static void addTask() {
         System.out.print("Enter task description: ");
         String description = scanner.nextLine();
@@ -72,6 +74,18 @@ public class TodoList {
         if (index >= 0 && index < tasks.size()) {
             tasks.get(index).isCompleted = true;
             System.out.println("Task marked as completed.");
+        } else {
+            System.out.println("Invalid task number.");
+        }
+    }
+
+    private static void deleteTask() {
+        viewTasks();
+        System.out.print("Enter the number of the task to delete: ");
+        int index = scanner.nextInt() - 1;
+        if (index >= 0 && index < tasks.size()) {
+            tasks.remove(index);
+            System.out.println("Task deleted successfully.");
         } else {
             System.out.println("Invalid task number.");
         }
