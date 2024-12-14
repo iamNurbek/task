@@ -42,6 +42,9 @@ public class TodoList {
                 case 4:
                     deleteTask();
                     break;
+                case 5:
+                    editTask();
+                    break;
                 case 6:
                     System.out.println("Exiting... Goodbye!");
                     System.exit(0);
@@ -90,5 +93,21 @@ public class TodoList {
             System.out.println("Invalid task number.");
         }
     }
+
+    private static void editTask() {
+        viewTasks();
+        System.out.print("Enter the number of the task to edit: ");
+        int index = scanner.nextInt() - 1;
+        scanner.nextLine(); // Consume newline
+        if (index >= 0 && index < tasks.size()) {
+            System.out.print("Enter the new description: ");
+            String newDescription = scanner.nextLine();
+            tasks.get(index).description = newDescription;
+            System.out.println("Task updated successfully.");
+        } else {
+            System.out.println("Invalid task number.");
+        }
+    }
+    
 
 }
