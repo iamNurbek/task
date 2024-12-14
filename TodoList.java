@@ -17,15 +17,18 @@ public class TodoList {
 
     public static void main(String[] args) {
         while (true) {
+            System.out.println("\n--- Todo List Menu ---");
             System.out.println("1. Add Task");
             System.out.println("2. View Tasks");
             System.out.println("3. Mark Task as Completed");
-            System.out.println("4. Exit");
+            System.out.println("4. Delete Task");
+            System.out.println("5. Edit Task");
+            System.out.println("6. Exit");
             System.out.print("Enter your choice: ");
-
+    
             int choice = scanner.nextInt();
             scanner.nextLine();
-
+    
             switch (choice) {
                 case 1:
                     addTask();
@@ -36,13 +39,16 @@ public class TodoList {
                 case 3:
                     markTaskCompleted();
                     break;
-                case 4:
+                case 6:
+                    System.out.println("Exiting... Goodbye!");
                     System.exit(0);
+                    break;
                 default:
-                    System.out.println("Invalid choice.");
+                    System.out.println("Invalid choice. Please try again.");
             }
         }
     }
+    
 
     private static void addTask() {
         System.out.print("Enter task description: ");
@@ -70,4 +76,5 @@ public class TodoList {
             System.out.println("Invalid task number.");
         }
     }
+
 }
