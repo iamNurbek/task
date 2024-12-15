@@ -35,7 +35,7 @@ public class TodoList {
                     break;
                 case 2:
                     viewTasks();
-                    break;
+                    break;  
                 case 3:
                     markTaskCompleted();
                     break;
@@ -98,7 +98,7 @@ public class TodoList {
         viewTasks();
         System.out.print("Enter the number of the task to edit: ");
         int index = scanner.nextInt() - 1;
-        scanner.nextLine(); // Consume newline
+        scanner.nextLine();
         if (index >= 0 && index < tasks.size()) {
             System.out.print("Enter the new description: ");
             String newDescription = scanner.nextLine();
