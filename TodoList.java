@@ -70,11 +70,24 @@ public class TodoList {
     }
 
     private static void viewTasks() {
-        System.out.println("Your tasks:");
+        System.out.println(CYAN + "\n--- Your Tasks ---" + RESET);
+        if (tasks.isEmpty()) {
+            System.out.println(RED + "No tasks available." + RESET);
+            return;
+        }
+
+        int completedCount = 0;
         for (int i = 0; i < tasks.size(); i++) {
             Task task = tasks.get(i);
-            System.out.println((i + 1) + ". " + task.description + " (" + (task.isCompleted ? "Completed" : "Incomplete") + ")");
+            if (task.isCompleted) completedCount++;
+            System.out.println((i + 1) + ". " + task.description + " " +
+                    (task.isCompleted ? GREEN + "(Completed)" + RESET : RED + "(Incomplete)" + RESET));
         }
+
+        System.out.println(CYAN + "\nSummary: " + RESET +
+                "Total: " + tasks.size() +
+                ", Completed: " + GREEN + completedCount + RESET +
+                ", Incomplete: " + RED + (tasks.size() - completedCount) + RESET);
     }
 
     private static void markTaskCompleted() {
