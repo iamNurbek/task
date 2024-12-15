@@ -61,6 +61,17 @@ public class TodoList {
             }
         }
     }
+
+    private static Task getTaskByIndex(String prompt) {
+        System.out.print(YELLOW + prompt + RESET);
+        int index = scanner.nextInt() - 1;
+        if (index >= 0 && index < tasks.size()) {
+            return tasks.get(index);
+        } else {
+            System.out.println(RED + "Invalid task number." + RESET);
+            return null;
+        }
+    }
     
     private static void addTask() {
         System.out.print(YELLOW + "Enter task description: " + RESET);
