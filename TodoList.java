@@ -15,8 +15,15 @@ public class TodoList {
     private static ArrayList<Task> tasks = new ArrayList<>();
     private static Scanner scanner = new Scanner(System.in);
 
+    private static final String RESET = "\u001B[0m";
+    private static final String GREEN = "\u001B[32m";
+    private static final String RED = "\u001B[31m";
+    private static final String CYAN = "\u001B[36m";
+    private static final String YELLOW = "\u001B[33m";
+
     public static void main(String[] args) {
         while (true) {
+            System.out.println(CYAN + "\n--- Todo List Menu ---" + RESET);
             System.out.println("\n--- Todo List Menu ---");
             System.out.println("1. Add Task");
             System.out.println("2. View Tasks");
@@ -24,7 +31,7 @@ public class TodoList {
             System.out.println("4. Delete Task");
             System.out.println("5. Edit Task");
             System.out.println("6. Exit");
-            System.out.print("Enter your choice: ");
+            System.out.print(YELLOW + "Enter your choice: " + RESET);
     
             int choice = scanner.nextInt();
             scanner.nextLine();
@@ -46,20 +53,20 @@ public class TodoList {
                     editTask();
                     break;
                 case 6:
-                    System.out.println("Exiting... Goodbye!");
+                    System.out.println(GREEN + "Exiting... Goodbye!" + RESET);
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Invalid choice. Please try again.");
+                    System.out.println(RED + "Invalid choice. Please try again." + RESET);
             }
         }
     }
     
     private static void addTask() {
-        System.out.print("Enter task description: ");
+        System.out.print(YELLOW + "Enter task description: " + RESET);
         String description = scanner.nextLine();
         tasks.add(new Task(description));
-        System.out.println("Task added successfully.");
+        System.out.println(GREEN + "Task added successfully." + RESET);
     }
 
     private static void viewTasks() {
