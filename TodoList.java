@@ -92,13 +92,13 @@ public class TodoList {
 
     private static void markTaskCompleted() {
         viewTasks();
-        System.out.print("Enter the number of the task to mark as completed: ");
+        System.out.print(YELLOW + "Enter the number of the task to mark as completed: " + RESET);
         int index = scanner.nextInt() - 1;
         if (index >= 0 && index < tasks.size()) {
             tasks.get(index).isCompleted = true;
-            System.out.println("Task marked as completed.");
+            System.out.println(GREEN + "Task marked as completed." + RESET);
         } else {
-            System.out.println("Invalid task number.");
+            System.out.println(RED + "Invalid task number." + RESET);
         }
     }
 
