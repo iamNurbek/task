@@ -116,16 +116,16 @@ public class TodoList {
 
     private static void editTask() {
         viewTasks();
-        System.out.print("Enter the number of the task to edit: ");
+        System.out.print(YELLOW + "Enter the number of the task to edit: " + RESET);
         int index = scanner.nextInt() - 1;
         scanner.nextLine();
         if (index >= 0 && index < tasks.size()) {
-            System.out.print("Enter the new description: ");
+            System.out.print(YELLOW + "Enter the new description: " + RESET);
             String newDescription = scanner.nextLine();
             tasks.get(index).description = newDescription;
-            System.out.println("Task updated successfully.");
+            System.out.println(GREEN + "Task updated successfully." + RESET);
         } else {
-            System.out.println("Invalid task number.");
+            System.out.println(RED + "Invalid task number." + RESET);
         }
     }
     
