@@ -112,13 +112,11 @@ public class TodoList {
 
     private static void deleteTask() {
         viewTasks();
-        System.out.print(YELLOW + "Enter the number of the task to delete: " + RESET);
+        Task task = getTaskByIndex("Enter the number of the task to delete: ");
         int index = scanner.nextInt() - 1;
-        if (index >= 0 && index < tasks.size()) {
-            tasks.remove(index);
+        if (task != null) {
+            tasks.remove(task);
             System.out.println(GREEN + "Task deleted successfully." + RESET);
-        } else {
-            System.out.println(RED + "Invalid task number." + RESET);
         }
     }
 
