@@ -24,7 +24,6 @@ public class TodoList {
     public static void main(String[] args) {
         while (true) {
             System.out.println(CYAN + "\n--- Todo List Menu ---" + RESET);
-            System.out.println("\n--- Todo List Menu ---");
             System.out.println("1. Add Task");
             System.out.println("2. View Tasks");
             System.out.println("3. Mark Task as Completed");
@@ -113,7 +112,6 @@ public class TodoList {
     private static void deleteTask() {
         viewTasks();
         Task task = getTaskByIndex("Enter the number of the task to delete: ");
-        int index = scanner.nextInt() - 1;
         if (task != null) {
             tasks.remove(task);
             System.out.println(GREEN + "Task deleted successfully." + RESET);
