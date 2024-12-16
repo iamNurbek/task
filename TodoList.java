@@ -32,35 +32,38 @@ public class TodoList {
         System.out.print(YELLOW + "Enter your choice: " + RESET);
     }
 
+    private static void handleUserChoice (int choice) {
+        switch (choice) {
+            case 1:
+                addTask();
+                break;
+            case 2:
+                viewTasks();
+                break;  
+            case 3:
+                markTaskCompleted();
+                break;
+            case 4:
+                deleteTask();
+                break;
+            case 5:
+                editTask();
+                break;
+            case 6:
+                System.out.println(GREEN + "Exiting... Goodbye!" + RESET);
+                System.exit(0);
+                break;
+            default:
+                System.out.println(RED + "Invalid choice. Please try again." + RESET);
+        }
+    }
+
     public static void main(String[] args) {
         while (true) {
             displayMenu();
             int choice = scanner.nextInt();
             scanner.nextLine();
-    
-            switch (choice) {
-                case 1:
-                    addTask();
-                    break;
-                case 2:
-                    viewTasks();
-                    break;  
-                case 3:
-                    markTaskCompleted();
-                    break;
-                case 4:
-                    deleteTask();
-                    break;
-                case 5:
-                    editTask();
-                    break;
-                case 6:
-                    System.out.println(GREEN + "Exiting... Goodbye!" + RESET);
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println(RED + "Invalid choice. Please try again." + RESET);
-            }
+            handleUserChoice(choice);
         }
     }
 
