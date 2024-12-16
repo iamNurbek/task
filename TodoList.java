@@ -21,17 +21,20 @@ public class TodoList {
     private static final String CYAN = "\u001B[36m";
     private static final String YELLOW = "\u001B[33m";
 
+    private static void displayMenu() {
+        System.out.println(CYAN + "\n--- Todo List Menu ---" + RESET);
+        System.out.println("1. Add Task");
+        System.out.println("2. View Tasks");
+        System.out.println("3. Mark Task as Completed");
+        System.out.println("4. Delete Task");
+        System.out.println("5. Edit Task");
+        System.out.println("6. Exit");
+        System.out.print(YELLOW + "Enter your choice: " + RESET);
+    }
+
     public static void main(String[] args) {
         while (true) {
-            System.out.println(CYAN + "\n--- Todo List Menu ---" + RESET);
-            System.out.println("1. Add Task");
-            System.out.println("2. View Tasks");
-            System.out.println("3. Mark Task as Completed");
-            System.out.println("4. Delete Task");
-            System.out.println("5. Edit Task");
-            System.out.println("6. Exit");
-            System.out.print(YELLOW + "Enter your choice: " + RESET);
-    
+            displayMenu();
             int choice = scanner.nextInt();
             scanner.nextLine();
     
